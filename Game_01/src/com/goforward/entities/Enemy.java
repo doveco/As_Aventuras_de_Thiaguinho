@@ -40,20 +40,20 @@ public class Enemy extends Entity{
 		maskh = 10;
 		*/
 		if(isColiddingWithPlayer() == false) {
-		if((int)x < Game.player.getX() && World.isFree((int)(x+speed), this.getY())
+		if((int)x < Game.player.getX() && World.isFree((int)(x+speed), this.getY(), 0)
 				&& !isColidding((int)(x+speed), this.getY())) {
 			x+=speed;
 		}
-		else if((int)x > Game.player.getX() && World.isFree((int)(x-speed), this.getY())
+		else if((int)x > Game.player.getX() && World.isFree((int)(x-speed), this.getY(), 0)
 				&& !isColidding((int)(x-speed), this.getY())) {
 			x-=speed;
 		}
 		
-		if((int)y < Game.player.getY() && World.isFree(this.getX(), (int)(y+speed))
+		if((int)y < Game.player.getY() && World.isFree(this.getX(), (int)(y+speed), 0)
 				&& !isColidding(this.getX(), (int)(y+speed))) {
 			y+=speed;
 		}
-		else if((int)y > Game.player.getY() && World.isFree(this.getX(), (int)(y-speed))
+		else if((int)y > Game.player.getY() && World.isFree(this.getX(), (int)(y-speed), 0)
 				&& !isColidding(this.getX(), (int)(y-speed))) {
 			y-=speed;
 		}

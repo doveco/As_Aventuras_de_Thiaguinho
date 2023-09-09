@@ -10,6 +10,7 @@ public class Sound {
 	public static final Sound musicBackground = new Sound("/music.wav");
 	public static final Sound hurtEffect = new Sound("/hurt.wav");
 	public static final Sound shootEffect = new Sound("/shoot.wav");
+	public static final Sound jumpEffect = new Sound("/jump.wav");
 	
 	private Sound(String name ) {
 		try {
