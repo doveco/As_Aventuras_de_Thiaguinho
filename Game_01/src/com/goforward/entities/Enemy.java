@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
 import com.goforward.main.Game;
+import com.goforward.main.Sound;
 import com.goforward.world.Camera;
 import com.goforward.world.World;
 
@@ -57,8 +58,9 @@ public class Enemy extends Entity{
 			y-=speed;
 		}
 		}else{
-			//Estmaos colidindo
+			//Estamos colidindo
 			if(Game.rand.nextInt(100) < 10) {
+			Sound.hurtEffect.play();
 			Game.player.life-=Game.rand.nextInt(3);
 			Game.player.isDamaged = true;			
 			//System.out.println("Vida: "+ Game.player.life);

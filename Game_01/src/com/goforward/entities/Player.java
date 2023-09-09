@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import com.goforward.graficos.Spritesheet;
 import com.goforward.main.Game;
+import com.goforward.main.Sound;
 import com.goforward.world.Camera;
 import com.goforward.world.World;
 
@@ -119,6 +120,7 @@ public class Player extends Entity {
 			//System.out.println("Atirou com o mouse");
 			mouseShoot = false;
 			if (hasGun && ammo > 0) {
+				Sound.shootEffect.play();
 			ammo--;
 			//Criar bala e atirar!
 			
